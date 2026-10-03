@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Leave Apply</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top-area">
+      <div class="quick-links">
+        <div class="quick-card">
+          <div><div class="quick-title">Important Links</div><div class="quick-action">CLICK HERE</div></div>
+          <span class="quick-icon">▤</span>
+        </div>
+        <div class="quick-card">
+          <div><div class="quick-title">Student Facilitation</div><div class="quick-action">CLICK TO VIEW</div></div>
+          <span class="quick-icon purple">▶</span>
+        </div>
+        <div class="quick-card">
+          <div><div class="quick-title">Anti Ragging</div><div class="quick-action">READ NOW</div></div>
+          <span class="quick-icon pale">×</span>
+        </div>
+        <div class="quick-card cu-lms">
+          <div><div class="quick-title">CU LMS</div><div class="quick-action">CLICK HERE</div></div>
+          <span class="quick-icon">⌂</span>
+        </div>
+        <div class="quick-card email-card">
+          <div><div class="quick-title">My University Email</div><div class="quick-action">VIEW DETAILS</div></div>
+          <span class="quick-icon">✉</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="leave-header">Hostel Leave Apply</section>
+      <div class="notice">*Note: Once Leave is REJECTED, You Can Reapply The Next Day.</div>
+
+      <section class="leave-form">
+        <div class="field full">
+          <label for="leaveType">Type of Leave:</label>
+          <select id="leaveType">
+            <option value="">Select Type</option>
+            <option>Day Out</option>
+            <option>Night Out Leave</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="fromDate">From Date for Leave:</label>
+          <input id="fromDate" type="date">
+        </div>
+        <div class="field">
+          <label for="toDate">To Date for Leave:</label>
+          <input id="toDate" type="date">
+        </div>
+
+        <div class="field">
+          <label for="fromTime">Time From:(hh:mm AM/PM eg:11:00 AM/PM)</label>
+          <input id="fromTime" type="time">
+        </div>
+        <div class="field">
+          <label for="toTime">Time To:(hh:mm AM/PM eg:11:00 AM/PM)</label>
+          <input id="toTime" type="time">
+        </div>
+
+        <div class="field">
+          <label for="totalDays">Totals No. of Days:</label>
+          <input id="totalDays" type="text" readonly>
+        </div>
+        <div class="field">
+          <label for="purpose">Purpose of Leave:</label>
+          <textarea id="purpose" placeholder="Enter purpose"></textarea>
+        </div>
+
+        <label class="confirm">
+          <input id="confirm" type="checkbox">
+          <span>I confirm that I have informed my parents about my night out/day out leave, and I acknowledge that I am fully responsible for myself during this time</span>
+        </label>
+
+        <div class="buttons">
+          <button id="submitBtn" type="button">SUBMIT</button>
+          <button id="cancelBtn" type="button">CANCEL</button>
+        </div>
+      </section>
+
+      <section class="previous">
+        <h2>Previous Leave</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>Applied on</th><th>Name</th><th>Type</th><th>Purpose</th><th>Remarks</th><th>Action</th></tr>
+            </thead>
+            <tbody id="leaveTable"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>Chandigarh University, Gharuan, Mohali (Punjab)</strong>
+      <span>|</span>
+      <strong>Helpline: 1800 257 1800</strong>
+      <span>|</span>
+      <strong>Email: studentcare@cumail.in</strong>
+      <span>|</span>
+      <span class="report">Report</span>
+    </footer>
+  </div>
+  <div id="toast" class="toast"></div>
+  <button class="help" aria-label="Help">?</button>
+  <script src="app.js"></script>
+</body>
+</html>
